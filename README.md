@@ -70,13 +70,6 @@ set "DOUYIN_SOURCE_PROFILE=D:\旧目录\browser_data"
 
 若登录失效：关闭程序和它打开的 Chrome，删除本目录 `browser_data/`，重新运行并扫码。
 
-## 项目选择说明
-
-调研的主要候选：
-
-1. [JoeanAmier/TikTokDownloader](https://github.com/JoeanAmier/TikTokDownloader)（DouK-Downloader）：约 1.5 万 Star，功能最完整，明确支持抖音收藏夹、图集、下载 ID 记录和作品独立目录；因此作为设计参考最有价值。但其当前 README 明确提示抖音加密参数算法已经失效、扫码登录失效，且源码要求 Python 3.12，直接部署其当前版不能保证收藏夹可用。
-2. [laigus/MediaCollector](https://github.com/laigus/MediaCollector)：有友好的 Web UI 和收藏夹选择，但项目很新；检查源码发现下载记录是任务级的，删除/新建任务会失去跨任务去重，而且图集图片平铺在收藏夹目录，不满足“每个图集单独文件夹”。
-3. [renyijiu/douyin_downloader](https://github.com/renyijiu/douyin_downloader)：已归档，最后代码更新较早，不适合当前抖音接口。
 
 最终实现采用 DouK-Downloader 的成熟设计思想（作品 ID 去重、图集图片、作品目录），结合本机已验证可工作的 DrissionPage 浏览器同源 API：不依赖已失效的签名算法，能读取登录账号的真实收藏夹。
 
