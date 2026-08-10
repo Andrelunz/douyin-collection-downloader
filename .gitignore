@@ -1,0 +1,22 @@
+# Runtime secrets and browser login state
+browser_data/
+
+# Downloaded media and state
+下载/
+data/
+*.part
+下载失败.txt
+
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# Verification scratch data
+.smoke_download/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
